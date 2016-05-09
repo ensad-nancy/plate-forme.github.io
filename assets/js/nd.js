@@ -1,12 +1,16 @@
 // var templates = getTemplates();
 
 $.ajax({
-    url: "http://api.tumblr.com/v2/blog/nouveau.plateforme.org/posts/?api_key=Srhk9qkcJO69pAoB4ltM5uIqpwUBO7kgDqDEaCD9Jo8EafWyHE&notes_info=true",
+    url: "http://api.tumblr.com/v2/blog/nouveau.plateforme.org/posts/",
+    data: {
+      api_key:'Srhk9qkcJO69pAoB4ltM5uIqpwUBO7kgDqDEaCD9Jo8EafWyHE',
+      notes_info: false
+    },
     dataType: 'jsonp',
     success: function(data){
-        $('#results').html(plateforme.posts( data.response ) );
-        $("img").addClass('img-responsive');
-        $("iframe").addClass('embed-responsive-item').wrap( "<div class='embed-responsive embed-responsive-16by9'></div>" );;
+      $('#results').html(plateforme.posts( data.response ) );
+      $("img").addClass('img-responsive');
+      $("iframe").addClass('embed-responsive-item').wrap( "<div class='embed-responsive embed-responsive-16by9'></div>" );;
     }
 });
 
