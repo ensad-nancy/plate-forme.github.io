@@ -1,2 +1,2 @@
-# nouveau-departement
-nouveau-departement.github.io
+# nouveau.plateforme.org
+plate-forme.github.io
